@@ -29,7 +29,7 @@
  *     There are many possible values of Squares__c, but it must fit one of the following regular expressions:
  *         /P([a-h][18])/: A pawn was promoted on the square represented by the group.
  *         /M([a-h][1-8]){2,4}/: A move occurred. The squares represented by the group have changed. It will be 2 squares for most moves, 3 for en passant, 4 for castle.
- *         /O([WB])/: A player offered a draw. The group represents which player offered it*.
+ *         /O([WB])/: A player offered a draw. The regex group represents which player offered it*.
  *         /D([AS3I]|50)/: A draw occurred. The group represents what caused the draw.
  *             A: agreement
  *             S: stalemate
