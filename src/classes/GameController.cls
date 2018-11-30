@@ -27,16 +27,16 @@
  *     The event has one value: Squares__c
  *     Originally, it was just the changed squares- however, the event is much more versatile, and Squares__c can contain more information now.
  *     There are many possible values of Squares__c, but it must fit one of the following regular expressions:
- *         /P([a-h][18])/: A pawn was promoted on the square represented by the group.
- *         /M([a-h][1-8]){2,4}/: A move occurred. The squares represented by the group have changed. It will be 2 squares for most moves, 3 for en passant, 4 for castle.
+ *         /P([a-h][18])/: A pawn was promoted on the square represented by the regex group.
+ *         /M([a-h][1-8]){2,4}/: A move occurred. The squares represented by the regex group have changed. It will be 2 squares for most moves, 3 for en passant, 4 for castle.
  *         /O([WB])/: A player offered a draw. The regex group represents which player offered it*.
- *         /D([AS3I]|50)/: A draw occurred. The group represents what caused the draw.
+ *         /D([AS3I]|50)/: A draw occurred. The regex group represents what caused the draw.
  *             A: agreement
  *             S: stalemate
  *             3: 3 time repetition
  *             I: insufficient material for checkmate
  *             50: 50 move rule
- *         /W([WB])([CR])/: A player won. The first group represents which player won*. The second group represents how: 'C' for checkmate, 'R' for resignation.
+ *         /W([WB])([CR])/: A player won. The first regex group represents which player won*. The second regex group represents how: 'C' for checkmate, 'R' for resignation.
  *      *If the explanation says ([WB]) represents which player, 'W' means white and 'B' means black.
  * 
  *      There are four directions that code or comments may refer to: towards white, towards black, queenside, kingside.
